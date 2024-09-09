@@ -1,1 +1,391 @@
-54c64f5c3d
+
+
+------------------Script Making---------------------
+function IGM(Lib, Offset, Replaced) local info = gg.getTargetInfo() localpack = info.nativeLibraryDir local t = gg.getRangesList(localpack..'/'..Lib) for _, __ in pairs(t) do local t = gg.getValues({{address = __.start, flags = gg.TYPE_DWORD}, {address = __.start + 18, flags = gg.TYPE_WORD}}) if t[1].value == 1179403647 then Offset = __['start'] + Offset end assert(Offset ~= nil, '[rwmem]: error, provided address is ngg.') _rw = {} if type(Replaced) == 'number' then _ = '' for _ = 1, Replaced do _rw[_] = {address = (Offset - 1) + _, flags = gg.TYPE_BYTE} end for v, __ in ipairs(gg.getValues(_rw)) do _ = _ .. string.format('%02X', __.value & 255) end return _ end Byte = {} Replaced:gsub('..', function(x) Byte[#Byte + 1] = x _rw[#Byte] = {address = (Offset - 1) + #Byte, flags = gg.TYPE_BYTE, value = x .. 'h'} end) gg.setValues(_rw) end end
+
+
+
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end -----------PERMISSION CODE
+
+-------------lobby------------
+
+function START()
+IG = gg.choice({
+ BOOST .. " UNLIMITED BOOST", ---IG 1
+ ZOOM .. " MAGIC ZOOM", ---IG 2
+ DROP .. " ENABLE WEAPON DROP", ---IG 3
+ SPEED .. " SPEED HACK", ---IG 4
+ WEIGHT .. " NO WEAPON WEIGHT ", ---IG 5
+         "🚫 REMOVE ADS 🚫 ", ---IG 6
+	" >>>> ADVANCE <<<<", ---IG 7
+	">>>>💎 VIP 💎<<<<", ---IG 8
+	" AIMLOCKING 🔥✔️ ", ---IG 9
+	 "⛔ Exit ⛔ " ---IG 10
+	 
+},nil,"virus modz") -----Head
+
+ if IG == nil then else end
+ if IG == 1 then MAS1() end
+ if IG == 2 then MAS2() end
+ if IG == 3 then MAS3() end
+ if IG == 4 then MAS4() end
+ if IG == 5 then MAS5() end
+ if IG == 6 then MAS6() end
+ if IG == 7 then MAS7() end
+ if IG == 8 then MAS8() end
+ if IG == 9 then MAS9() end
+ if IG == 10 then Exit() end
+ menuk = -1
+ end
+
+
+--------Function 1
+
+BOOST = "〔 ❌ 〕"
+function MAS1()
+if BOOST == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x7ad344, "0100A0E31EFF2FE1") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+BOOST = "〔 ✅ 〕"
+elseif BOOST == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x7ad344, "00482DE90DB0A0E1") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+BOOST = "〔 ❌ 〕"
+ end
+end
+
+--------Function 2
+
+ZOOM = "〔 ❌ 〕"
+function MAS2()
+if ZOOM == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x81614c, "00F020E3") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+ZOOM = "〔 ✅ 〕"
+elseif ZOOM == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x81614c, "04D04DE2") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+ZOOM = "〔 ❌ 〕"
+ end
+end
+
+--------Function 3
+
+DROP = "〔 ❌ 〕"
+function MAS3()
+if DROP == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x4f0c64, "0100A0E31EFF2FE1") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+DROP = "〔 ✅ 〕"
+elseif DROP == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x4f0c64, "08D04DE204008DE5") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+DROP = "〔 ❌ 〕"
+ end
+end
+
+--------Function 4
+
+SPEED = "〔 ❌ 〕"
+function MAS4()
+if SPEED == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x514f30, "C01AB1EE") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+SPEED = "〔 ✅ 〕"
+elseif SPEED == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x514f30, "C01AB7EE") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+SPEED = "〔 ❌ 〕"
+ end
+end
+
+--------Function 5
+
+WEIGHT = "〔 ❌ 〕"
+function MAS5()
+if WEIGHT == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x8169d0, "0000A0E3") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+WEIGHT = "〔 ✅ 〕"
+elseif WEIGHT == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x8169d0, "8F0A90ED") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+WEIGHT = "〔 ❌ 〕"
+ end
+end
+
+--------Function 6
+
+function MAS6()
+ IGM("libcocos2dcpp.so", 0x85bb68, "0100A0E31EFF2FE1") --- Type Lib Name with .so
+ IGM("libcocos2dcpp.so", 0x877a0c, "0100A0E31EFF2FE1")
+ IGM("libcocos2dcpp.so", 0x8797a4, "0100A0E31EFF2FE1")
+ gg.toast("✔️ ON ✔️")
+end
+
+function Exit()
+gg.alert("»» ------------------------------------------ «« \n\n THANKS FOR USING MY SCRIPT\n\n»» ------------------------------------------ ««")
+print(" \n 💔 YOUTUBE : Virus Modz ")
+gg.setVisible(true)
+os.exit()
+end
+
+--------Function 7
+
+----------------------------------------------------------------------------------------------------------------------------------------
+function MAS7()
+IG = gg.choice({
+ LENGTH .. " HIGH MELEE LENGTH ",
+ TEAM .. " KILL TEAM MATE ",
+ HIDE .. " HIDE YOUR WEAPONS ",
+ GRAVITY .. " ANTI GRAVITY ",
+ RADAR .. " RADAR EVERYWHERE ",
+    
+},nil,"virus modz") -----Head    
+
+ if IG == nil then else end
+ if IG == 1 then MAK1() end
+ if IG == 2 then MAK2() end
+ if IG == 3 then MAK3() end
+ if IG == 4 then MAK4() end
+ if IG == 5 then MAK5() end
+ menuk = -1
+ end
+
+--------Function 1
+
+LENGTH = "〔 ❌ 〕"
+function MAK1()
+if LENGTH == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x815fc0, "FF0F0FE31EFF2FE1") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+LENGTH = "〔 ✅ 〕"
+elseif LENGTH == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x815fc0, "04D04DE200008DE5") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+LENGTH = "〔 ❌ 〕"
+ end
+end
+
+--------Function 2
+
+TEAM = "〔 ❌ 〕"
+function MAK2()
+if TEAM == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x7b0298, "1EFF2FE1") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+TEAM = "〔 ✅ 〕"
+elseif TEAM == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x7b0298, "00482DE9") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+TEAM = "〔 ❌ 〕"
+ end
+end
+
+--------Function 3
+
+HIDE = "〔 ❌ 〕"
+function MAK3()
+if HIDE == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x5ad5f0, "1EFF2FE1") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+HIDE = "〔 ✅ 〕"
+elseif HIDE == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x5ad5f0, "00482DE9") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+HIDE = "〔 ❌ 〕"
+ end
+end
+
+--------Function 4
+
+GRAVITY = "〔 ❌ 〕"
+function MAK4()
+if GRAVITY == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x56efe8, "0000A0E3") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+GRAVITY = "〔 ✅ 〕"
+elseif GRAVITY == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x56efe8, "1D0A90ED") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+GRAVITY = "〔 ❌ 〕"
+ end
+end
+
+--------Function 5
+
+RADAR = "〔 ❌ 〕"
+function MAK5()
+if RADAR == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x56efe8, "050000A0") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+RADAR = "〔 ✅ 〕"
+elseif RADAR == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x56efe8, "050000DA") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+RADAR = "〔 ❌ 〕"
+ end
+end
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+function MAS8()
+IG = gg.choice({
+ TALEPORT .. " GRENADE TALEPORT ",
+ FREEZE .. " FREEZE ENEMY ",
+ ANIMATION .. " REMOVE DEATH ANIMATION ",
+ SPRAYER .. " All GUN DEATH SPRAYER ",
+ CAMARA .. " FREEZE CAMARA ",
+    
+},nil,"virus modz") -----Head    
+
+ if IG == nil then else end
+ if IG == 1 then MAT1() end
+ if IG == 2 then MAT2() end
+ if IG == 3 then MAT3() end
+ if IG == 4 then MAT4() end
+ if IG == 5 then MAT5() end
+ menuk = -1
+ end
+ 
+ --------Function 1
+ 
+ TALEPORT = "〔 ❌ 〕"
+function MAT1()
+if TALEPORT == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x6ab044, "00F020E3") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+TALEPORT = "〔 ✅ 〕"
+elseif TALEPORT == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x6ab044, "C01AB7EE") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+TALEPORT = "〔 ❌ 〕"
+ end
+end
+
+ --------Function 2
+ 
+ FREEZE = "〔 ❌ 〕"
+function MAT2()
+if FREEZE == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x7b80f0, "0100A0E31EFF2FE1") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+FREEZE = "〔 ✅ 〕"
+elseif FREEZE == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x7b80f0, "F04F2DE91CB08DE2") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+FREEZE = "〔 ❌ 〕"
+ end
+end
+
+ --------Function 3
+ 
+ ANIMATION = "〔 ❌ 〕"
+function MAT3()
+if ANIMATION == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x7b9a60, "0100A0E31EFF2FE1") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+ANIMATION = "〔 ✅ 〕"
+elseif ANIMATION == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x7b9a60, "00482DE90DB0A0E1") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+ANIMATION = "〔 ❌ 〕"
+ end
+end
+
+ --------Function 4
+ 
+ SPRAYER = "〔 ❌ 〕"
+function MAT4()
+if SPRAYER == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x815014, "00F020E3") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+SPRAYER = "〔 ✅ 〕"
+elseif SPRAYER == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x815014, "500000DA") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+SPRAYER = "〔 ❌ 〕"
+ end
+end
+
+ --------Function 5
+ 
+ CAMARA = "〔 ❌ 〕"
+function MAT5()
+if CAMARA == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x7cf530, "0100A0E31EFF2FE1") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+CAMARA = "〔 ✅ 〕"
+elseif CAMARA == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x7cf530, "30482DE908B08DE2") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+CAMARA = "〔 ❌ 〕"
+ end
+end
+ 
+ 
+ 
+ 
+ 
+--------Function 10 (EXIT)
+
+
+
+while true do
+  if gg.isVisible(true) then
+    menuk = 1
+    gg.setVisible(false)
+  end
+  if menuk == 1 then
+    START()
+  end
+  if menu == 2 then
+    START()
+    end
+  menuk = -1
+end
