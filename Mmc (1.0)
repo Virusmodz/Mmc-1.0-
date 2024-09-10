@@ -12,14 +12,14 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 function START()
 IG = gg.choice({
  BOOST .. " UNLIMITED BOOST", ---IG 1
- ZOOM .. " MAGIC ZOOM", ---IG 2
- DROP .. " ENABLE WEAPON DROP", ---IG 3
+ ZOOM .. " MAGIC ZOOM \n                 (on in lobby)", ---IG 2
+ DROP .. " ENABLE WEAPON DROP \n                 (on in lobby)", ---IG 3
  SPEED .. " SPEED HACK", ---IG 4
  WEIGHT .. " NO WEAPON WEIGHT ", ---IG 5
          "🚫 REMOVE ADS 🚫 ", ---IG 6
 	" >>>> ADVANCE <<<<", ---IG 7
 	">>>>💎 VIP 💎<<<<", ---IG 8
-	" AIMLOCKING 🔥✔️ ", ---IG 9
+	" EXPERIMENT 🔥✔️ ", ---IG 9
 	 "⛔ Exit ⛔ " ---IG 10
 	 
 },nil,"virus modz") -----Head
@@ -369,6 +369,10 @@ CAMARA = "〔 ❌ 〕"
 end
  
  
+ function MAS9()
+ gg.alert("COMING SOON")
+gg.setVisible(true)
+ end
  
  
  
