@@ -153,6 +153,8 @@ IG = gg.choice({
  HIDE .. " HIDE YOUR WEAPONS ",
  GRAVITY .. " ANTI GRAVITY ",
  RADAR .. " RADAR EVERYWHERE ",
+ SPREAD .. " NO BULLET SPREAD ",
+ MELE .. " MAGIC MELE ",
     
 },nil,"virus modz") -----Head    
 
@@ -162,6 +164,8 @@ IG = gg.choice({
  if IG == 3 then MAK3() end
  if IG == 4 then MAK4() end
  if IG == 5 then MAK5() end
+ if IG == 6 then MAK6() end
+ if IG == 7 then MAK7() end
  menuk = -1
  end
 
@@ -255,6 +259,43 @@ RADAR = "〔 ❌ 〕"
  end
 end
 
+--------Function 6
+
+SPREAD = "〔 ❌ 〕"
+function MAK6()
+if SPREAD == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x8162b4, "0100A0E31EFF2FE1") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+SPREAD = "〔 ✅ 〕"
+elseif SPREAD == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x8162b4, "08D04DE204008DE5") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+SPREAD = "〔 ❌ 〕"
+ end
+end
+
+--------Function 7
+
+MELE = "〔 ❌ 〕"
+function MAK7()
+if MELE == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x4f10a8, "001AB7EE") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+MELE = "〔 ✅ 〕"
+elseif MELE == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x4f10a8, "001A91ED") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+MELE = "〔 ❌ 〕"
+ end
+end
+
+
 -------------------------------------------------------------------------------------------------------------------------------------
 
 function MAS8()
@@ -264,6 +305,7 @@ IG = gg.choice({
  ANIMATION .. " REMOVE DEATH ANIMATION ",
  SPRAYER .. " All GUN DEATH SPRAYER ",
  CAMARA .. " FREEZE CAMARA ",
+ INSTEAD .. " INSTEAD FLY ",
     
 },nil,"virus modz") -----Head    
 
@@ -273,6 +315,7 @@ IG = gg.choice({
  if IG == 3 then MAT3() end
  if IG == 4 then MAT4() end
  if IG == 5 then MAT5() end
+ if IG == 6 then MAT6() end
  menuk = -1
  end
  
@@ -365,7 +408,27 @@ gg.toast('❌ OF ❌')
 CAMARA = "〔 ❌ 〕"
  end
 end
+
+ --------Function 6
  
+ INSTEAD = "〔 ❌ 〕"
+function MAT6()
+if INSTEAD == "〔 ❌ 〕" then
+
+ IGM("libcocos2dcpp.so", 0x7a5098, "00F020E3") --- Type Lib Name with .so
+gg.toast('⭕ ON ⭕')
+
+INSTEAD = "〔 ✅ 〕"
+elseif INSTEAD == "〔 ✅ 〕" then
+IGM("libcocos2dcpp.so", 0x7a5098, "070000DA") --- Type Lib Name with .so
+gg.toast('❌ OF ❌')
+
+INSTEAD = "〔 ❌ 〕"
+ end
+end
+ 
+ 
+ -------------------------------------------------------------------------------------------------------------------------------------
  
  function MAS9()
  gg.alert("COMING SOON")
