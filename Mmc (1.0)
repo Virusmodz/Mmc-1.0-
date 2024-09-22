@@ -97,12 +97,12 @@ SPEED = "〔 ❌ 〕"
 function MAS4()
 if SPEED == "〔 ❌ 〕" then
 
- IGM("libcocos2dcpp.so", 0x514f30, "C01AB1EE") --- Type Lib Name with .so
+ IGM("libcocos2dcpp.so", 0x514F50, "101F80F2") --- Type Lib Name with .so
 gg.toast('⭕ ON ⭕')
 
 SPEED = "〔 ✅ 〕"
 elseif SPEED == "〔 ✅ 〕" then
-IGM("libcocos2dcpp.so", 0x514f30, "C01AB7EE") --- Type Lib Name with .so
+IGM("libcocos2dcpp.so", 0x514F50, "C01AB7EE") --- Type Lib Name with .so
 gg.toast('❌ OF ❌')
 
 SPEED = "〔 ❌ 〕"
